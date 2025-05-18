@@ -30,7 +30,6 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
-
 .hero h1,
 .hero p {
   position: relative;
@@ -169,3 +168,4 @@
   font-size: 1rem;
   color: var(--color-text);
 }
+
