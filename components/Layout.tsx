@@ -38,7 +38,7 @@ export default function Layout({
           </button>
         )}
         <div className={styles.logo}>
-          <Link href="/home">
+          <Link href="/">
             <img
               src="/images/company-logo.png"
               alt="Company Logo"
@@ -48,7 +48,7 @@ export default function Layout({
           </Link>
         </div>
         <nav className={styles.nav}>
-          <Link href="/home">ホーム</Link>
+          <Link href="/">ホーム</Link>
           <Link href="/company">会社概要</Link>
           <Link href="/services">サービス</Link>
           <Link href="/contact">お問い合わせ</Link>
@@ -65,7 +65,7 @@ export default function Layout({
           </button>
         )}
         <nav className={styles.mobileNav}>
-          <Link href="/home" onClick={() => setSidebarOpen(false)}>ホーム</Link>
+          <Link href="/" onClick={() => setSidebarOpen(false)}>ホーム</Link>
           <Link href="/company" onClick={() => setSidebarOpen(false)}>会社概要</Link>
           <Link href="/services" onClick={() => setSidebarOpen(false)}>サービス</Link>
           <Link href="/contact" onClick={() => setSidebarOpen(false)}>お問い合わせ</Link>
