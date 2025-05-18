@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import styles from '../styles/Layout.module.css';
 import Background from './Background';
 
@@ -17,6 +16,7 @@ export default function Layout({
   title = '当社サービス',
   hero,
 }: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
       <Head>
@@ -26,9 +26,20 @@ export default function Layout({
       </Head>
       <Background />
       <header className={styles.header}>
+        {!sidebarOpen && (
+          <button
+            className={styles.menuToggle}
+            onClick={() => setSidebarOpen(true)}
+            aria-label="Open menu"
+          >
+            <div />
+            <div />
+            <div />
+          </button>
+        )}
         <div className={styles.logo}>
           <Link href="/home">
-            <Image
+            <img
               src="/images/company-logo.png"
               alt="Company Logo"
               width={63}
@@ -43,6 +54,23 @@ export default function Layout({
           <Link href="/contact">お問い合わせ</Link>
         </nav>
       </header>
+      <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
+        {sidebarOpen && (
+          <button
+            className={styles.closeToggle}
+            onClick={() => setSidebarOpen(false)}
+            aria-label="Close menu"
+          >
+            &larr;
+          </button>
+        )}
+        <nav className={styles.mobileNav}>
+          <Link href="/home" onClick={() => setSidebarOpen(false)}>ホーム</Link>
+          <Link href="/company" onClick={() => setSidebarOpen(false)}>会社概要</Link>
+          <Link href="/services" onClick={() => setSidebarOpen(false)}>サービス</Link>
+          <Link href="/contact" onClick={() => setSidebarOpen(false)}>お問い合わせ</Link>
+        </nav>
+      </div>
       {hero}
       <div className={styles.container}>
         <motion.main
