@@ -28,7 +28,9 @@ import styles from '../styles/Home.module.css';
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              ようこそ、WizAward株式会社へ
+              ようこそ、
+              <br className={styles.mobileBreak} />
+              WizAward株式会社へ
             </motion.h1>
             <motion.p
               initial={{ x: -50, opacity: 0 }}
@@ -75,7 +77,7 @@ import styles from '../styles/Home.module.css';
             <div className={styles.sectionImage}>
               <Image
                 src="/images/service2.webp"
-                alt="アジャイルプロジェクトのイメージ"
+                alt="DX推進サポート"
                 width={600}
                 height={400}
                 priority
@@ -83,11 +85,11 @@ import styles from '../styles/Home.module.css';
             </div>
             <div className={styles.sectionText}>
               <p>
-                プロジェクトにはアジャイル手法を採用し、顧客との密なコミュニケーションを通じて要件の変化に柔軟に対応。納品後には高品質な成果物に対して高い評価と揺るぎない信頼をいただき、多くのお客様から継
-    続的にご依頼をいただいております。
+                テクノロジーを活用した課題解決や新規事業開発をご検討の際は、ぜひお気軽にお問い合わせください。当社が貴社のDX推進を全力でサポートいたします。
               </p>
             </div>
           </motion.section>
+
 
           <motion.section
             className={styles.contentSection}
@@ -96,21 +98,22 @@ import styles from '../styles/Home.module.css';
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className={styles.sectionText}>
-              <p>
-                テクノロジーを活用した課題解決や新規事業開発をご検討の際は、ぜひお気軽にお問い合わせください。当社が貴社のDX推進を全力でサポートいたします。
-              </p>
-            </div>
             <div className={styles.sectionImage}>
               <Image
                 src="/images/service3.webp"
-                alt="テクノロジー活用のイメージ"
+                alt="アジャイル開発"
                 width={600}
                 height={400}
                 priority
               />
             </div>
+            <div className={styles.sectionText}>
+              <p>
+                プロジェクトにはアジャイル手法を採用し、顧客との密なコミュニケーションを通じて要件の変化に柔軟に対応。納品後には高品質な成果物に対して高い評価と揺るぎない信頼をいただき、多くのお客様から継続的にご依頼をいただいております。
+              </p>
+            </div>
           </motion.section>
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
