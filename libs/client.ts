@@ -12,8 +12,8 @@ if (!apiKey) {
 }
 
 export const client = createClient({
-  serviceDomain,
-  apiKey,
+  serviceDomain: process.env.NEXT_PUBLIC_MICROCMS_DOMAIN || "",
+  apiKey: process.env.MICROCMS_API_KEY || "",
 });
 
 /**
