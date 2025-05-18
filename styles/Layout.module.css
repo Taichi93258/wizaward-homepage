@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  z-index: 2;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  background-color: transparent;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+  background-color: transparent;
+}
+
+.main {
+
+  color: #333333;
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #333333;
+  font-size: 0.875rem;
+  color: #aaaaaa;
+}
+/* Container to center content and add horizontal padding */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1024px;
+  margin: 0 auto;
+  /* ヘッダー固定時にコンテンツが隠れないようヘッダーの高さ分を確保 */
+      padding: 92px 1rem 0;
+}
+
