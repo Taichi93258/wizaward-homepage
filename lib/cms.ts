@@ -1,10 +1,10 @@
 import { createClient } from 'microcms-js-sdk';
 
-const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
+const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_DOMAIN;
 const apiKey = process.env.MICROCMS_API_KEY;
 
 if (!serviceDomain) {
-  throw new Error('`NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN` environment variable is not defined');
+  throw new Error('`NEXT_PUBLIC_MICROCMS_DOMAIN` environment variable is not defined');
 }
 
 if (!apiKey) {
