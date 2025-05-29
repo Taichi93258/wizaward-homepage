@@ -169,6 +169,69 @@
   color: var(--color-text);
 }
 
+.serviceCard {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  background-color: var(--color-bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.serviceCard .sectionImage {
+  align-self: start;
+}
+
+.serviceCard .sectionImage img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.serviceCard .sectionText {
+  background-color: transparent;
+  color: var(--color-text);
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.serviceContent {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background-color: var(--color-bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.serviceContent img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Mobile-specific adjustments */
 .mobileBreak {
   display: none;
@@ -182,6 +245,24 @@
 /* Show on mobile only */
 .hideOnDesktop {
   display: none;
+}
+
+/* Service Card Wrapper for responsiveness */
+.serviceCardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  flex-direction: row; /* Default to row on desktop */
+  gap: 3rem;
+  background: #f8f8f8; /* Light background */
+  padding: 4rem 1.5rem; /* Padding */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Shadow */
+  margin: 2rem auto; /* Vertical margin and center horizontally */
+  width: 100%; /* Take full width of container */
+  max-width: 1600px; /* Max width */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 @media (max-width: 640px) {
@@ -229,5 +310,30 @@
     margin: 0;
   }
 
+  .serviceCardWrapper {
+    flex-direction: column; /* Stack vertically on mobile */
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+    gap: 1.5rem; /* Adjust gap for mobile */
+    min-height: auto; /* Remove min-height constraint on mobile */
+    margin: 1rem auto; /* Adjust margin for mobile */
+  }
+
+  .serviceImageContainer {
+    img {
+      width: 200px !important; /* Smaller size on mobile */
+      height: 200px !important; /* Smaller size on mobile */
+    }
+  }
+}
+
+/* Service Image Container styles for responsiveness */
+.serviceImageContainer {
+  /* Flex properties are already on the parent div */
+  /* Control the size of the image within this container */
+  img {
+    width: 320px !important; /* Default desktop size */
+    height: 320px !important; /* Default desktop size */
+    object-fit: contain; /* Ensure image fits within the bounds */
+  }
 }
 
