@@ -319,21 +319,34 @@
   }
 
   .serviceImageContainer {
+    /* Control the container size on mobile */
+    max-width: 200px; /* Max width for container on mobile */
+    max-height: 200px; /* Max height for container on mobile */
+    flex: none; /* Prevent flex: 1 from affecting size on mobile */
+    width: 100%; /* Take full width up to max-width */
+    height: auto; /* Height adjusts to content */
     img {
-      width: 200px !important; /* Smaller size on mobile */
-      height: 200px !important; /* Smaller size on mobile */
+      width: 100%; /* Make image fill the container width */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 100%; /* Redundant but good practice */
+      max-height: 100%; /* Ensure image fits container height */
+      object-fit: contain; /* Ensure image fits without cropping */
     }
   }
 }
 
 /* Service Image Container styles for responsiveness */
 .serviceImageContainer {
-  /* Flex properties are already on the parent div */
-  /* Control the size of the image within this container */
+  flex: 1; /* Restore flex: 1 for desktop layout */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center in desktop row */
   img {
-    width: 320px !important; /* Default desktop size */
-    height: 320px !important; /* Default desktop size */
+    /* Sizing controlled by parent container on mobile */
+    /* Actual size on desktop is determined by Next/Image props and flex */
     object-fit: contain; /* Ensure image fits within the bounds */
+    max-width: 100%; /* Ensure image does not overflow its immediate container */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
