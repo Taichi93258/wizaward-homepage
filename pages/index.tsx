@@ -1,7 +1,6 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Layout from '../components/Layout';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.css';
 
     export default function Home() {
@@ -46,9 +45,11 @@ import styles from '../styles/Home.module.css';
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             >
-              <Link href="/contact">
-                <button className={styles.ctaButton}>お問い合わせ</button>
-              </Link>
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <a href="/contact" className={styles.ctaButton} style={{ textDecoration: 'none', display: 'inline-block' }}>
+                  お問い合わせ
+                </a>
+              </div>
             </motion.div>
           </motion.section>
           }
