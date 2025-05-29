@@ -57,7 +57,7 @@ const Services: NextPage<ServicesProps> = ({ content }) => {
           ) : (
             // SkillBoost5カードの表示 (既存の内容)
             <>
-              <div className={homeStyles.serviceImageContainer} style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+              <div className={homeStyles.serviceImageContainer} style={{ display: 'flex', justifyContent: 'center', flex: 0.8 }}>
                 <a href={service.href} target="_blank" rel="noopener noreferrer">
                   <Image
                     src={service.img.src || ''}
@@ -69,7 +69,7 @@ const Services: NextPage<ServicesProps> = ({ content }) => {
                   />
                 </a>
               </div>
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+              <div style={{ flex: 1.2, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <h2 style={{ color: '#1976d2', fontWeight: 700, fontSize: '2.5rem', textAlign: 'center', lineHeight: 1.2, marginBottom: '0.5rem' }}>
                   {service.title}
                   <div style={{ fontSize: '1.2rem', color: '#555', fontWeight: 700, marginTop: '0.7rem', display: 'inline-block' }}>
@@ -144,8 +144,6 @@ const Services: NextPage<ServicesProps> = ({ content }) => {
                       <li>カテゴリー別の体系的な学習コンテンツ</li>
                       <li>レベル別の段階的な学習システム</li>
                       <li>学習進捗の可視化と継続的なモチベーション維持</li>
-                      <li>美しく使いやすいインターフェース</li>
-                      <li>モバイルフレンドリーなデザイン</li>
                     </ul>
                     <h3>学習の流れ</h3>
                     <ol>
@@ -157,8 +155,6 @@ const Services: NextPage<ServicesProps> = ({ content }) => {
                     <ul>
                       <li>連続学習日数の記録</li>
                       <li>学習履歴の管理</li>
-                      <li>直感的なナビゲーション</li>
-                      <li>セキュアなユーザー認証</li>
                     </ul>
                     <p style={{ marginTop: '1.5rem' }}>SkillBoost5で、あなたのスキルアップの旅を始めましょう。</p>
                     <a
